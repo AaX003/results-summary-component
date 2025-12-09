@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'HankenGrotesk-VariableFont_wght';
+  src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: 'HankenGrotesk-VariableFont_wght', sans-serif;
+  background: hsl(241, 100%, 89%); /* light lavender */
+}
+
+/* main container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid-layout {
+  width: 360px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+/* results layout */
+.results-layout {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%),
+  hsl(241, 81%, 54%));
+  width: 100%;
+  max-width: 260px;
+  height: 340px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+}
+
+/* title */
+.results-title {
+  font-size: .88rem;
+  color: rgb(209, 209, 209);
+}
+
+/* circular gradient */
+.bg-grad {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%),
+  hsl(241, 86%, 59%));
+  box-shadow: inset 0 10px 10px 0 rgba(28, 2, 67, 0.412);
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 999px;
+}
+
+.results-value-larger {
+  font-size: 2.4rem;
+  margin-bottom: -1rem;
+  color: rgb(255, 255, 255);
+}
+
+.results-value-smaller {
+  font-size: .66rem;
+  color: rgb(209, 209, 209);
+}
+
+/* status */
+.results-status {
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  margin-bottom: -.22rem;
+}
+
+/* subtitle */
+.results-subtitle {
+  font-size: .78em;
+  color: rgb(209, 209, 209);
+  text-wrap: balance;
+}
+
+/* button */
+.open-summary-btn,
+.close-summary-btn {
+  border-radius: 99px;
+  border: none;
+  width: 180px;
+  margin: 0 auto;
+  padding: .55rem 1.03rem .65rem .85rem;
+  background: rgb(46, 46, 79);
+  color: rgb(255, 255, 255);
+  transition: 
+    background 0.3s ease,
+    filter 0.12s ease;
+}
+
+.open-summary-btn:hover,
+.close-summary-btn:hover {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%),
+  hsl(241, 86%, 59%));
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.202);
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+/* summary layout */
+.summary-layout {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: .75rem ;
+}
+
+.summary-status {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 12px;
+}
+
+.summary-status-reaction,
+.summary-status-memory, 
+.summary-status-verbal,
+.summary-status-visual {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: .25rem .55rem;
+  border-radius: 10px;
+}
+
+.summary-status-reaction {
+  background: hsla(0, 100%, 67%, 0.108);
+}
+.summary-status-memory {
+  background: hsl(39, 100%, 56% , 0.108);
+}
+.summary-status-verbal {
+  background: hsl(166, 100%, 37%, 0.108);
+}
+.summary-status-visual {
+  background: hsl(234, 85%, 45%, 0.108);
+}
+
+/* icon positioning */
+.icon {
+  margin-right: 9px;
+}
+
+/* individual color varieties */
+.summary-status-reaction .text {
+  color: hsl(0, 100%, 67%); /* light red */
+}
+.summary-status-memory .text {
+  color: hsl(39, 100%, 56%); /* orange-gold yellow */
+}
+.summary-status-verbal .text {
+  color: hsl(166, 100%, 37%); /* green teal */
+}
+.summary-status-visual .text {
+  color: hsl(234, 85%, 45%); /* cobalt blue */
+}
+
+/* text */
+.text {
+  font-weight: 600;
+  margin-right: auto;
+}
+
+/* bolder */
+.bolder,
+.grey {
+  font-weight: 600;
+}
+/* grey */
+.grey {
+  color: rgb(131, 130, 130);
+}
+
+/* attribution */
+.attribution {
+  font-size: .88em;
+  margin-top: 1.05rem;
+}
+
+/* animation + properties */
+
+.results-layout,
+.summary-layout {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  animation: flipIn 0.45s ease forwards;
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* responsive tweaks */
+
+@media (max-width: 430px) {
+  .grid-layout {
+    width: 100%;
+  }
+  
+  .summary-title,
+  .results-status {
+    font-size: 1em;
+  }
+
+  .results-subtitle {
+    font-size: .68em;
+  }
+
+  .text,
+  .bolder,
+  .grey {
+    font-size: .75em;
+  }
+}
