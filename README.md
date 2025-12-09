@@ -3,8 +3,10 @@
 ### Overview 🧩
 My version of the Results Summary Component project challenge by Frontend Mentor. It features a results card displaying a user's score and category breakdowns. Includes a simple panel-flip interaction with a rotating animation for a creative twist! ✨
 
+### Demo Preview ✨
+
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/cf56b3b9-88ad-4345-8d36-e1f4d758b17d" />
+  <img src="https://github.com/user-attachments/assets/4abf58c8-e145-49c5-9389-e5de5fe0c62c" />
 </div>
 
 ---
