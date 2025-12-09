@@ -1,16 +1,29 @@
-# React + Vite
+# Results Summary Component 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Overview 🧩
+My version of the Results Summary Component project challenge by Frontend Mentor. It features a results card displaying a user's score and category breakdowns. Includes a simple panel-flip interaction with a rotating animation for a creative twist! ✨
 
-Currently, two official plugins are available:
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/cf56b3b9-88ad-4345-8d36-e1f4d758b17d" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+### Features ✨
+- Results card with total score / 100
+- Category list with matching icons
+- Show/Hide summary toggle
+- Custom flip transition
+- Fully responsive layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+### Tools ⚒️
+- **React**
+- **CSS**
+- **HTML5**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### Live Demo 🚀
+https://axacodes-results-summary-component.netlify.app/
